@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aaaa"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/MainText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="65dp"
+
+        android:padding="48px"
+        android:text="Welcome TO Unit Conversion App"
+        android:textAllCaps="true"
+        android:textSize="55px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/kgs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Pounds"
+
+        android:layout_width="360dp"
+        android:layout_height="140dp"
+
+        android:layout_marginBottom="184dp"
+        android:text="0"
+
+        android:textAlignment="center"
+        android:textSize="60px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kgs"
+        app:layout_constraintStart_toStartOf="@+id/kgs"
+        app:layout_constraintTop_toBottomOf="@+id/btn" />
+
+    <EditText
+        android:id="@+id/kgs"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="49dp"
+        android:hint="Enter Wieght in Kilograms"
+        android:textSize="68px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainText" />
+
+    <Button
+        android:id="@+id/btn"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="49dp"
+        android:layout_marginBottom="40dp"
+
+        android:text="CONVERT"
+        android:textSize="88px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Pounds"
+        app:layout_constraintStart_toStartOf="@+id/kgs"
+        app:layout_constraintTop_toBottomOf="@+id/kgs" />
+
+    <Button
+        android:id="@+id/reset"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:text="Reset"
+        android:textSize="88px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pounds" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

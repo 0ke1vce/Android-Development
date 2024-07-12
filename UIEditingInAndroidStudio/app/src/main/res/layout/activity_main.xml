@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/MyButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="45dp"
+        android:clickable="true"
+        android:enabled="true"
+
+        android:padding="30dp"
+        android:text="Click Me"
+
+        android:textSize="32sp"
+        android:textStyle="bold"
+
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/UjjwalKiId"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="32px"
+        android:background="#8BC34A"
+        android:gravity="center"
+        android:inputType="text"
+        android:padding="32px"
+        android:text="Ujjwal Is Here"
+        android:textAllCaps="true"
+
+        android:textColor="#1632CA"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <EditText
+        android:id="@+id/InputIdName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35px"
+        android:hint="Enter your name"
+
+        android:inputType="text"
+        android:padding="32px"
+        android:textAllCaps="true"
+
+        android:textSize="45dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="537dp"
+        tools:ignore="MissingConstraints" />
+
+    
+    <ImageView
+        android:id="@+id/MyImageId"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:src="@drawable/aaa"
+        android:scaleType="centerCrop"
+
+        android:contentDescription="This is an image"
+
+        android:padding="32px"
+        android:layout_margin="35px"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
