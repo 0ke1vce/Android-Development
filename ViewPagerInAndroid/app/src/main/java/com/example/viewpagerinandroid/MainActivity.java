@@ -3,15 +3,23 @@ package com.example.viewpagerinandroid;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
 public class MainActivity extends AppCompatActivity {
         ViewPager2 viewpager;
         MyNewPagerAdapter myAdapter;
+
+        TabLayout tablayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +47,25 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        tablayout=findViewById(R.id.tablayout);
+//        Connecting tablayout with viewpager
+        new TabLayoutMediator(tablayout
+                , viewpager, new TabLayoutMediator.TabConfigurationStrategy() {
+
+            //                ,((tab, position) -> {
+//                    This lambda function allows you to customise the tabs for each tabs corresponding to the fragment
+//            tab-> represent the current tab in the tab layout.   position-> represent the position of fragment within the Viewpager2
+
+            //        }
+//        ));  //use to integrate tablayout with viewpager2
+
+
+            @Override
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                    tab.setText("Fragment "+(position+1));
+
+            }
+        }).attach();   //the attach() is called at the end to attach the tab layout mediator to the tab layout and Viewpager2
     }
 }
 
