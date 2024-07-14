@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.databindinginandroid"
+    namespace = "com.example.masteringdatabinding_quadraticequationsolverapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.databindinginandroid"
+        applicationId = "com.example.masteringdatabinding_quadraticequationsolverapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -30,10 +30,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    buildFeatures{
-        dataBinding=true
-    }
-
+buildFeatures{
+dataBinding=true
+}
 }
 
 dependencies {

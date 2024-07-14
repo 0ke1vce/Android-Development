@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.databindinginandroid"
+    namespace = "com.example.livedataandviewmodelinandroid"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.databindinginandroid"
+        applicationId = "com.example.livedataandviewmodelinandroid"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,6 +33,7 @@ android {
     buildFeatures{
         dataBinding=true
     }
+
 
 }
 
