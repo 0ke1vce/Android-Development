@@ -38,6 +38,10 @@ android {
 }
 
 dependencies {
+    val lifecycle_version = "2.8.3"
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
 
     implementation(libs.appcompat)
     implementation(libs.material)
