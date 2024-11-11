@@ -8,100 +8,137 @@
     android:background="@drawable/appbackground"
     tools:context=".MainActivity2">
 
-
+    <!-- Logo Image -->
     <ImageView
         android:id="@+id/Logo"
-        android:layout_width="500px"
-
-        android:layout_height="500px"
-        android:layout_marginTop="6dp"
-
-
-        android:layout_marginBottom="351dp"
-        android:background="@drawable/imagelogo"
-        app:layout_constraintBottom_toTopOf="@+id/Login"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/imagelogo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="500px"
-        android:layout_height="150px"
-        android:hint="Enter your email"
-        app:layout_constraintBottom_toTopOf="@+id/Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="500px"
-        android:layout_height="150px"
-        android:hint="Enter Password"
-        app:layout_constraintBottom_toTopOf="@+id/GENDER"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Login"
-        android:layout_width="350px"
-        android:layout_height="0dp"
-        android:layout_marginBottom="165dp"
-        android:clickable="true"
-        android:text="Login To App"
-        android:textColor="#0074FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.859"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
-
+    <!-- Name Input Field -->
     <EditText
         android:id="@+id/Name"
-        android:layout_width="500px"
-        android:layout_height="150px"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="Enter your name"
-        app:layout_constraintBottom_toTopOf="@+id/Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Logo" />
 
+    <!-- Email Input Field -->
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter your email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Name" />
+
+    <!-- Password Input Field -->
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Email" />
+
+    <!-- Date of Birth Field (DatePicker) -->
+    <EditText
+        android:id="@+id/DateOfBirth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Date of Birth (DD/MM/YYYY)"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Password" />
+
+    <!-- Gender Selection RadioGroup -->
     <RadioGroup
         android:id="@+id/GENDER"
-        android:layout_width="185dp"
-        android:layout_height="101dp"
-        android:layout_marginBottom="14dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/DateOfBirth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DateOfBirth">
 
         <RadioButton
             android:id="@+id/Male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="Male      " />
+            android:text="Male" />
 
         <RadioButton
             android:id="@+id/Female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="Female" />
 
 
     </RadioGroup>
 
+    <!-- Location Input Field -->
     <EditText
-        android:id="@+id/DateOfBirth"
-        android:layout_width="500px"
-        android:layout_height="150px"
-        android:hint="Enter your DateOfBirth"
-        app:layout_constraintBottom_toTopOf="@+id/Login"
+        android:id="@+id/Location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter your location"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GENDER" />
 
+    <!-- Bio Input Field -->
+    <EditText
+        android:id="@+id/Bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Tell us about yourself"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Location" />
 
+    <!-- Sign Up Button -->
+    <TextView
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:clickable="true"
+        android:text="Login to app"
+        android:textColor="#0C2EED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bio"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/SignupApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="SignIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bio" />
 </androidx.constraintlayout.widget.ConstraintLayout>
