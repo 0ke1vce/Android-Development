@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
 @Database(entities = {Contacts.class},version = 1)
 public abstract class ContactDatabase extends RoomDatabase {
 
-    /*
+    /*f
     The database class is an abstract class that serves as the database holder.
     It includes methods to access the DAO and create a database instances
      */
